@@ -8,6 +8,7 @@
 #include <vector>
 #include <functional>
 #include <string>
+#include <list>
 
 class EntityManager
 {
@@ -39,7 +40,7 @@ private:
 	
 	std::unordered_map<EntityType, std::function<Entity*()>> m_entityFactory;
 
-	std::vector<std::pair<Entity*, unsigned int>> m_entities; //Entities with a unique identifier
+	std::list<std::pair<Entity*, unsigned int>> m_entities; //Entities with a unique identifier
 	std::vector<unsigned int> m_entitiesToRemove;
 	unsigned int m_entityCount;
 	SharedContext* m_sharedContext;
